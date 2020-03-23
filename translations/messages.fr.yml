@@ -1,0 +1,27 @@
+# /translations/messages.fr.yml
+
+menu:
+  produit: 'Produits'
+  panier: 'Panier'
+
+produit:
+  titre: 'Les Produits'
+  there_is: 'Il y a nb produits'
+  nom: 'Nom'
+  qte: 'Quantité'
+  prix: 'Prix'
+  ajoute: 'Produit ajouté'
+  supprimer: 'Produit supprimée'
+  introuvable: 'Produit introuvable'
+
+produits:
+  qte: 'Quantité :'
+  add: 'Ajouter au panier'
+  ajoute: 'Produit ajouté au panier'
+  supprimer: 'Produit supprimée'
+
+add_produit:
+  titre: 'Ajouter un produit'
+
+impossible:
+  image: "Impossible d'uploader l'image"

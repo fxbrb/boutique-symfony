@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier{% endblock %}
+
+{% block body %}
+
+{% if panier is not empty %}
+{% set prixtotal = 0 %}
+<table class="table">
+<thead>
+        <tr>
+            <th>Nom</th>
+            <th>Quantité</th>
+            <th>Montant</th>
+            <th></th>
+        </tr>
+</thead>
+
+    <tbody>
+        {% for mon_panier in panier %}
+        <tr>
+            <td> {{mon_panier.produit.nom}} </td>
+            <td> {{mon_panier.quantite}} </td>
+            {% set prixProduit = mon_panier.produit.prix * mon_panier.quantite %}
+            <td> {{prixProduit}} </td>
+            {% set prixtotal = prixtotal + prixProduit %}
+            <td>
+                <a class="btn btn-danger" href="{{path('panier_delete', {'id':mon_panier.id})}}">
+                  Supprimer
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>Total :{{prixtotal}}</p>
+
+
+
+<p> Vous avez {{panier|length}} Produits</p>
+{% else %}
+  Votre panier est vide
+
+{% endif %}
+
+{% endblock %}

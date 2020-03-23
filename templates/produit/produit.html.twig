@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  {{produit.nom}} {% endblock %}
+{% block body %} 
+<h1> {{ produit.nom }}</h1>
+<img src="{{ asset('uploads/' ~ produit.photo) }}" style="width: 300px">
+<p>{{ 'produits.qte'|trans}} {{ produit.qte }}</p>
+<p> {{ produit.prix }} €</p>
+
+<h1>{{'produits.add'|trans}}</h1>
+
+{{form(ajout_article)}}
+
+<a class="btn btn-danger" href="{{path('delete_produit', {'id':produit.id})}}">Supprimer</a>
+  
+
+{% endblock %}

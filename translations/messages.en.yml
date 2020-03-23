@@ -1,0 +1,27 @@
+# /translations/messages.en.yml
+
+menu:
+  produit: 'Products'
+  panier: 'Cart'
+
+produit: 
+  titre: 'Products'
+  there_is: 'There is nb products'
+  nom: 'Name'
+  qte: 'Quantity'
+  prix: 'Price'
+  ajoute: 'Product added'
+  supprimer: 'Deleted product'
+  introuvable: 'Product not found'
+
+produits:
+  qte: 'Quantity :'
+  add: 'Add to cart'
+  ajoute: 'Product added to shopping cart'
+  supprimer: 'Deleted product'
+
+add_produit:
+  titre: 'Add a product'
+
+impossible:
+  image: "Unable to upload image"
